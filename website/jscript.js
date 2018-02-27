@@ -11,3 +11,7 @@ var span = document.getElementsByClassName("close")[0];
 span.onclick = function() { 
     modal.style.display = "none";
 }
+
+function home(){
+	location.href = "travel in canada.html";
+}
