@@ -148,8 +148,8 @@ body {font-family: Arial, Helvetica, sans-serif;}
     padding-top: 0px; /* Location of the box */
     left: 450px;
     top: 100px;
-    width: 48%; /* Full width */
-    height: 57.5%; /* Full height */
+    width: 700px; /* Full width */
+    height: 623px; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
@@ -216,7 +216,13 @@ body {font-family: Arial, Helvetica, sans-serif;}
 }
 
 
-
+.bottrt{
+position:absolute;
+color:red;
+top:75%;
+right:40%;
+text-decoration: none;
+}
 
 .close2{
     display: none;
