@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<script src="jquery-1.9.1.min.js"></script>
+<script src="dialog.js"> </script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="../Desktop/69857_20160909020939_woeac.jpg">
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>travel in canada</title>
+</head>
+
+<body>
+
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <a class="fa fa-map-marker" style="font-size:24px" href="https://www.youtube.com" target="_self">Toronto</a>
+  <img class="modal-content" id="img01">
+</div>
+
+<script src="jscript.js">
+</script>
+<script>
+var modal = document.getElementById('myModal');
+
+var modalImg = document.getElementById("img01");
+function call(){
+    modal.style.display = "block";
+    modalImg.src = "grey map.jpg";
+}
+
+var cross = document.getElementsByClassName("close")[0];
+
+cross.onclick = function() { 
+    modal.style.display = "none";
+}
+var pin = document.getElementsByClassName("fa fa-map-marker")[0];
+	pin.onclick = function(){location.href = "https://www.youtube.com"}
+</script>
+
+<div>
+        <ul>
+            <a href="#" class="hvr-hang">Home</a>
+            <a href="#" class="hvr-hang" onClick="call()">Map</a>
+            <a href="#" class="hvr-hang">Schedule</a>
+            <a href="#" class="hvr-hang">Support</a>
+        </ul>
+</div>
+<a href="#" class="myButton">Ontario</a>
+
+</body>
+</html>
