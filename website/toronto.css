@@ -34,6 +34,7 @@ body, html {
   min-height: 100%;
 }
 
+
 .caption {
   position: absolute;
   left: 0;
@@ -41,6 +42,10 @@ body, html {
   width: 100%;
   text-align: center;
   color: #000;
+}
+
+a:hover, .caption:hover{
+  top:48.5%;
 }
 
 .caption a.border {
