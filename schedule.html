@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+
+<style>
+	aside {
+	top:0px;
+    float: right;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+	
+        #firstday{float:left; width:75%; height:500px;margin:10px; padding:10px; border:10px solid black;cursor: pointer;}
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+.accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+.active:after {
+    content: "\2212";
+}
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+</style>
+<script>
+        function allowDrop(ev) { ev.preventDefault(); }
+        function drag(ev) { ev.dataTransfer.setData("text", ev.target.id); }
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data).cloneNode(true));
+        }
+    </script>
+</head>
+<body>
+
+<h2>drag the tourist spot</h2>
+<div class="limiter">
+		<div class="container-table100">
+			<div class="wrap-table100">
+				<div class="table100 ver2 m-b-110">
+					<table data-vertable="ver2">
+						<thead>
+							<tr class="row100 head">
+								<th class="column100 column1" data-column="column1"></th>
+								<th class="column100 column2" data-column="column2">First Day</th>
+								<th class="column100 column3" data-column="column3">Second Day</th>
+								<th class="column100 column4" data-column="column4">Third Day</th>
+								<th class="column100 column5" data-column="column5">Fourth Day</th>
+								<th class="column100 column6" data-column="column6">Fifth Day</th>
+								<th class="column100 column7" data-column="column7">Sixth Day</th>
+								<th class="column100 column8" data-column="column8">Seventh Day</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="row100">
+								<td class="column100 column1" data-column="column1">Lawrence Scott</td>
+								<td class="column100 column2" data-column="column2" id="firstentry" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column3" data-column="column3"id="firstentry" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column4" data-column="column4" id="firstentry" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column5" data-column="column5" id="firstentry" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column6" data-column="column6" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column7" data-column="column7" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column8" data-column="column8" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+							</tr>
+
+							<tr class="row100">
+								<td class="column100 column1" data-column="column1">Jane Medina</td>
+								<td class="column100 column2" data-column="column2" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column3" data-column="column3" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column4" data-column="column4" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column5" data-column="column5" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column6" data-column="column6" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column7" data-column="column7" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column8" data-column="column8" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+							</tr>
+
+							<tr class="row100">
+								<td class="column100 column1" data-column="column1" >Billy Mitchell</td>
+								<td class="column100 column2" data-column="column2" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column3" data-column="column3" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column4" data-column="column4" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column5" data-column="column5" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column6" data-column="column6" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column7" data-column="column7" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column8" data-column="column8" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+							</tr>
+
+							<tr class="row100">
+								<td class="column100 column1" data-column="column1">Beverly Reid</td>
+								<td class="column100 column2" data-column="column2" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column3" data-column="column3" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column4" data-column="column4" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column5" data-column="column5" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column6" data-column="column6" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column7" data-column="column7" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column8" data-column="column8" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+							</tr>
+
+							<tr class="row100">
+								<td class="column100 column1" data-column="column1">Tiffany Wade</td>
+								<td class="column100 column2" data-column="column2" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column3" data-column="column3" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column4" data-column="column4" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column5" data-column="column5" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column6" data-column="column6" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column7" data-column="column7" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column8" data-column="column8" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+							</tr>
+
+							<tr class="row100">
+								<td class="column100 column1" data-column="column1">Sean Adams</td>
+								<td class="column100 column2" data-column="column2" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column3" data-column="column3" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column4" data-column="column4" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column5" data-column="column5" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column6" data-column="column6" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column7" data-column="column7" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column8" data-column="column8" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+							</tr>
+
+							<tr class="row100">
+								<td class="column100 column1" data-column="column1">Rachel Simpson</td>
+								<td class="column100 column2" data-column="column2" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column3" data-column="column3" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column4" data-column="column4" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column5" data-column="column5" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column6" data-column="column6" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column7" data-column="column7" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column8" data-column="column8" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+							</tr>
+
+							<tr class="row100">
+								<td class="column100 column1" data-column="column1">Mark Salazar</td>
+								<td class="column100 column2" data-column="column2" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column3" data-column="column3" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column4" data-column="column4" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column5" data-column="column5" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column6" data-column="column6" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column7" data-column="column7" ondrop="drop(event)" ondragover="allowDrop(event)"></td> 
+								<td class="column100 column8" data-column="column8" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<aside>
+<button class="accordion">toronto</button>
+<div class="panel" dropzone="copy">
+  <p draggable="true" ondragstart="drag(event)" id="casaloma" cursor= "pointer">casaloma</p>
+</div>
+
+<button class="accordion">downtown</button>
+<div class="panel">
+  <p draggable="true" ondragstart="drag(event)" id="cntower" cursor= "pointer">cn tower</p>
+</div>
+
+<button class="accordion">montreal</button>
+<div class="panel">
+  <p draggable="true" ondragstart="drag(event)" id="uoft" cursor= "pointer">uoft</p>
+</div>
+</aside>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+<!--===============================================================================================-->	
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+</body>
+</html>
