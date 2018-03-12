@@ -19,16 +19,19 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
 
+  
+
 <style>
-	aside {
+	nav {
 	top:0px;
-    float: right;
+    float: left;
     max-width: 160px;
     margin: 0;
     padding: 1em;
 }
 article {
-    margin-left: 170px;
+    float: right;
+    margin-left: 300px;
     border-left: 1px solid gray;
     padding: 1em;
     overflow: hidden;
@@ -77,10 +80,33 @@ article {
             ev.target.appendChild(document.getElementById(data).cloneNode(true));
         }
     </script>
+<script>
+function myFunction() {
+    window.print();
+}
+</script>
 </head>
 <body>
 
 <h2>drag the tourist spot</h2>
+<div>
+<nav>
+<button class="accordion">toronto</button>
+<div class="panel" dropzone="copy">
+  <p draggable="true" ondragstart="drag(event)" id="casaloma" cursor= "pointer">casaloma</p>
+</div>
+
+<button class="accordion">downtown</button>
+<div class="panel">
+  <p draggable="true" ondragstart="drag(event)" id="cntower" cursor= "pointer">cn tower</p>
+</div>
+
+<button class="accordion">montreal</button>
+<div class="panel">
+  <p draggable="true" ondragstart="drag(event)" id="uoft" cursor= "pointer">uoft</p>
+</div>
+</nav>
+<article>
 <div class="limiter">
 		<div class="container-table100">
 			<div class="wrap-table100">
@@ -198,22 +224,11 @@ article {
 	</div>
 </div>
 
-<aside>
-<button class="accordion">toronto</button>
-<div class="panel" dropzone="copy">
-  <p draggable="true" ondragstart="drag(event)" id="casaloma" cursor= "pointer">casaloma</p>
+</article>
 </div>
-
-<button class="accordion">downtown</button>
-<div class="panel">
-  <p draggable="true" ondragstart="drag(event)" id="cntower" cursor= "pointer">cn tower</p>
-</div>
-
-<button class="accordion">montreal</button>
-<div class="panel">
-  <p draggable="true" ondragstart="drag(event)" id="uoft" cursor= "pointer">uoft</p>
-</div>
-</aside>
+<a href="#" class="btn btn-success btn-lg">
+      <span class="glyphicon glyphicon-print"></span> Print 
+    </a>
 
 <script>
 var acc = document.getElementsByClassName("accordion");
