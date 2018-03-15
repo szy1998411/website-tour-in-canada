@@ -17,5 +17,5 @@ span.onclick = function() {
 
 
 function home(){
-	location.href = "travel in canada.html";
+	window.location = "travel in canada.html";
 }

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+aside {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+	
+        #firstday{float:left; width:75%; height:500px;margin:10px; padding:10px; border:10px solid black;cursor: grabbing;}
+	 #sidebar{float:right; width:25%; height:1000px;margin:10px; padding:10px; border:10px solid black;cursor: grabbing;}
+    </style>
+    <script>
+        function allowDrop(ev) { ev.preventDefault(); }
+        function drag(ev) { ev.dataTransfer.setData("text", ev.target.id); }
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
+</head>
+<body>
+	<article id="firstday" ondrop="drop(event)"ondragover="allowDrop(event)">morning</article>
+	<article id="firstday" ondrop="drop(event)"ondragover="allowDrop(event)">afternoon</article>
+    <aside id="sidebar" ondrop ="drop(event)" ondragover="allowDrop(event)">  
+	
+	<p draggable="true" ondragstart="drag(event)" id="toronto" cursor= "grabbing"}> toronto</p>
+	<p draggable="true" ondragstart="drag(event)" id="casaloma"> casaloma</p>
+	<p draggable="true" ondragstart="drag(event)" id="uoft"> uoft</p>
+	</aside>
+
+</body>
+</html>

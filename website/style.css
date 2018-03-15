@@ -7,6 +7,7 @@
   right:0;
   top:0;
   bottom:0;
+  width:100%;
   background-size: cover;
 }
 
@@ -220,8 +221,8 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 .bottrt{
 position:absolute;
-color:black;
-top:74%;
+color:red;
+top:75%;
 right:40%;
 text-decoration: none;
 }
