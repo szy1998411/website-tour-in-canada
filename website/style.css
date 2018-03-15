@@ -1,10 +1,13 @@
 .background-image {
   background: url('16.pic_hd.jpg');
-  position:absolute;
+  background-repeat: no-repeat;
+  background-position: centre centre;
+  position:fixed;
   left:0;
   right:0;
   top:0;
   bottom:0;
+  width:100%;
   background-size: cover;
 }
 

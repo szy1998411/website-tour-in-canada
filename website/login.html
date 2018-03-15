@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="login.css">
+<script src="login.js">
+</script>
+</head>
+<body>
+<div class="bgimg-1">
+  <div class="caption">
+    <a class="border" onclick="document.getElementById('id01').style.display='block'" style="width:auto;" style="text-decoration:none" >Login</a>
+  </div>
+  <div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="travel in canada.html" method="post" target="_self">
+    <div class="imgcontainer">
+    </div>
+    <div class="container">
+      <label><b>Username</b></label>
+      <input type="text" placeholder="Enter Username"  id="username" required>
+
+      <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password"  id="password" required>
+        
+      <button type="submit" id="submit" onclick="validate()">Login</button>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+    </div>
+  </form>
+</div>
+</div>
+</body>
+</html>
