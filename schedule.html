@@ -22,6 +22,73 @@
   
 
 <style>
+/* Center the loader */
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
+.column1{display:initial;}
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
 	nav {
 	top:0px;
     float: left;
@@ -86,7 +153,10 @@ function myFunction() {
 }
 </script>
 </head>
-<body>
+<body onload="myFunction()" style="margin:0;">
+<div id="loader"></div>
+
+<div style="display:none;" id="myDiv" class="animate-bottom">
 
 <h2>drag the tourist spot</h2>
 <div>
@@ -126,7 +196,7 @@ function myFunction() {
 						</thead>
 						<tbody>
 							<tr class="row100">
-								<td class="column100 column1" data-column="column1">Lawrence Scott</td>
+								<td class="column100 column1" data-column="column1" id="firstentry">Lawrence Scott<span class="close">&times;</span></td>
 								<td class="column100 column2" data-column="column2" id="firstentry" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
 								<td class="column100 column3" data-column="column3"id="firstentry" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
 								<td class="column100 column4" data-column="column4" id="firstentry" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
@@ -223,13 +293,42 @@ function myFunction() {
 		</div>
 	</div>
 </div>
-
-</article>
 </div>
+</article>
 <a href="#" class="btn btn-success btn-lg">
       <span class="glyphicon glyphicon-print"></span> Print 
     </a>
+</div>
 
+<script>
+var myVar;
+
+function myFunction() {
+    myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
+<script>
+// Get the modal
+var modal = document.getElementById('firstentry');
+
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+
+</script>
 <script>
 var acc = document.getElementsByClassName("accordion");
 var i;
@@ -244,6 +343,7 @@ for (i = 0; i < acc.length; i++) {
     } 
   });
 }
+
 </script>
 <!--===============================================================================================-->	
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
