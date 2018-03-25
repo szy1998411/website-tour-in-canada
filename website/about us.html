@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.fade {
+    position: relative;
+}
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.fade:hover .image {
+  opacity: 0.3;
+}
+
+.fade:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.hero-image {
+  background-image: url("pic.jpg");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.hero-text button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 10px 25px;
+  color: black;
+  background-color: #ddd;
+  text-align: center;
+  cursor: pointer;
+}
+
+.hero-text button:hover {
+  background-color: #555;
+  color: white;
+}
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.a {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.a:hover {
+  background-color: #555;
+}
+</style>
+</head>
+<body>
+
+<div class="hero-image">
+  <div class="hero-text">
+    <h1 style="font-size:50px">Meet the awesome team</h1>
+    <p>incredible folks</p>
+    <button>Hire me</button>
+  </div>
+</div>
+
+<h2>We always wanna start a journey with someone we love</h2>
+
+<br>
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <div class="fade">
+      <img src="pic.png" alt="Sam" style="width:100%" class="image">
+	<div class="middle">
+        <div class="text">Journey will continue, I will continue</div>
+  	</div>
+      </div>
+      <div class="container">
+        <h2>Sam Yang</h2>
+        <p class="title">CEO & Founder</p>
+        <p>University of Waterloo</p>
+        <p>yqf19971124@gmail.com</p>
+        <p><a class="a" href="https://www.linkedin.com/in/qifan-yang-farm" style="text-decoration:none" target="_blank">Connect me on Linkedin</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <div class="fade">
+      <img src="pic.jpg" alt="Joe" style="width:100%" class="image">
+	<div class="middle">
+        <div class="text">quote</div>
+  	</div>
+      </div>
+      <div class="container">
+        <h2>Joe</h2>
+        <p class="title">Co-founder</p>
+        <p>University of Waterloo</p>
+        <p>sunzhenyu1998411@outlook.com</p>
+        <p><a class="a" href="https://www.linkedin.com/in/zhenyu-sun-897761156/" style="text-decoration:none" target="_blank">Connect me on linkedin</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <div class="fade">
+      <img src="pic.jpg" alt="Sam" style="width:100%" class="image">
+	<div class="middle">
+        <div class="text">You're the next</div>
+  	</div>
+      </div>
+      <div class="container">
+        <h2>I want you</h2>
+        <p class="title">web design</p>
+        <p>University of Waterloo</p>
+        <p>yqf19971124@gmail.com</p>
+        <p><a class="a" href="https://www.linkedin.com/in/qifan-yang-farm" style="text-decoration:none" target="_blank">Connect me on Linkedin</a></p>
+      </div>
+    </div>
+  
+</div>
+
+</body>
+</html>
