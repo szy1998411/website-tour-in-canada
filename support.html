@@ -2,7 +2,34 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <style>
+.btn {
+  background: #00ff6a;
+  background-image: -webkit-linear-gradient(top, #00ff6a, #2bb84e);
+  background-image: -moz-linear-gradient(top, #00ff6a, #2bb84e);
+  background-image: -ms-linear-gradient(top, #00ff6a, #2bb84e);
+  background-image: -o-linear-gradient(top, #00ff6a, #2bb84e);
+  background-image: linear-gradient(to bottom, #00ff6a, #2bb84e);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #45c748;
+  background-image: -webkit-linear-gradient(top, #45c748, #20b339);
+  background-image: -moz-linear-gradient(top, #45c748, #20b339);
+  background-image: -ms-linear-gradient(top, #45c748, #20b339);
+  background-image: -o-linear-gradient(top, #45c748, #20b339);
+  background-image: linear-gradient(to bottom, #45c748, #20b339);
+  text-decoration: none;
+}
 .accordion {
     background-color: #eee;
     color: #444;
@@ -69,8 +96,10 @@
 
 <button class="accordion">Why this website sucks???</button>
 <div class="panel">
-  <p>I don't know the answer either</p>
+  <p>I don't know the answer either. If you can leave your advice below to help us improve, we will really apppreciate that.</p>
 </div>
+<textarea rows=10 cols=100 placeholder="leave your suggestions here..."></textarea>
+<button type="button" class="btn" onclick="myFunction()">Submit</button>
 
 
 <script>
@@ -87,6 +116,12 @@ for (i = 0; i < acc.length; i++) {
       panel.style.maxHeight = panel.scrollHeight + "px";
     } 
   });
+}
+</script>
+
+<script>
+function myFunction() {
+    alert("We have received your feedback.\nThank you for your contribution!");
 }
 </script>
 
