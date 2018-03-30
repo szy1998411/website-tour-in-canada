@@ -17,15 +17,5 @@ span.onclick = function() {
 
 
 function home(){
-	window.location = "home page.html";
+	window.location = "travel in canada.html";
 }
-function schedule(){
-	window.location = "schedule.html";
-}
-function Aboutus(){
-	window.location = "About us.html";
-}
-function support(){
-	window.location = "support.html";
-}
-
