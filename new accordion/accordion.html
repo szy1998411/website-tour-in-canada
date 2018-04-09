@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+
+<html >
+
+<head>
+  
+<meta charset="UTF-8">
+  
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>Swanky little accordian list</title>
+  
+
+
+
+  
+  
+      
+<link rel="stylesheet" href="css/accordion.css">
+
+  
+
+
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	
+<!--===============================================================================================-->
+
+
+
+
+<style>
+.sidenav {
+    height: 100%;
+    width: 260px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: grey;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+.wholepart{margin-left: 260px;}
+</style>
+
+<script>
+        function allowDrop(ev) { ev.preventDefault(); }
+        function drag(ev) { ev.dataTransfer.setData("text", ev.target.id); }
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data).cloneNode(true));
+        }
+    </script>
+
+
+</head>
+
+
+
+<body>
+  
+
+<div class='title'>
+  
+<h1>
+    Trip Schedule
+  </h1>
+  
+</div>
+
+
+<div class='sidenav'>
+<div class='wrapper'>
+
+  <input id='pictures' type='checkbox'>
+ 
+ <label for='pictures'>
+    
+<p>Toronto</p>
+    
+<div class='lil_arrow'></div>
+    
+<div class='content'>
+      
+<ul>
+        
+<li>
+          
+<a draggable="true" ondragstart="drag(event)" id="casaloma" cursor= "pointer">Casa Loma</a>
+        
+</li>
+        
+<li>
+          
+<a href='#' draggable="true" ondragstart="drag(event)" id="cntower" cursor= "pointer">CN Tower</a>
+        
+</li>
+        
+<li>
+          
+<a href='#' draggable="true" ondragstart="drag(event)" id="uoft" cursor= "pointer">U of T</a>
+        
+</li>
+      
+</ul>
+    
+</div>
+   
+<span></span>
+  
+</label>
+  
+<input id='jobs' type='checkbox'>
+  
+<label for='jobs'>
+    
+<p>Montreal</p>
+    
+<div class='lil_arrow'></div>
+    
+<div class='content'>
+      
+<ul>
+        
+<li>
+          
+<a draggable="true" ondragstart="drag(event)" id="Mount Royal" cursor= "pointer">Mount Royal</a>
+        
+</li>
+        
+<li>
+          
+<a draggable="true" ondragstart="drag(event)" id="notredame" cursor= "pointer">Notre Dame</a>
+        
+</li>
+        
+<li>
+          
+<a draggable="true" ondragstart="drag(event)" id="University of Mcgrill" cursor= "pointer">Mcgill</a>
+        
+</li>
+      
+</ul>
+    
+</div>
+    
+<span></span>
+  
+</label>
+  
+<input id='events' type='checkbox'>
+  
+<label for='events'>
+    
+<p>Events & Task Management</p>
+    
+<div class='lil_arrow'></div>
+    
+<div class='content'>
+      
+<ul>
+        
+<li>
+          
+<a draggable="true" ondragstart="drag(event)" id="cntower1" cursor= "pointer">Calendar</a>
+        
+</li>
+        
+<li>
+          
+<a draggable="true" ondragstart="drag(event)" id="cntower2" cursor= "pointer">Important Dates</a>
+        
+</li>
+        
+<li>
+          
+<a draggable="true" ondragstart="drag(event)" id="cntower3" cursor= "pointer">Someting Event related</a>
+        
+</li>
+      
+</ul>
+    
+</div>
+    
+<span></span>
+  
+</label>
+  
+<input id='financial' type='checkbox'>
+  
+<label for='financial'>
+    
+<p>Invoicing & financial</p>
+    
+<div class='lil_arrow'></div>
+    
+<div class='content'>
+      
+<ul>
+        
+<li>
+          
+<a draggable="true" ondragstart="drag(event)" id="cntower4" cursor= "pointer">Invoicing Templates</a>
+        
+</li>
+        
+<li>
+          
+<a draggable="true" ondragstart="drag(event)" id="cntower5" cursor= "pointer">Invoice Archives</a>
+        
+</li>
+        
+<li>
+          
+<a draggable="true" ondragstart="drag(event)" id="cntower6" cursor= "pointer">Send Invoice</a>
+        
+</li>
+      
+</ul>
+    
+</div>
+    
+<span></span>
+  
+</label>
+  
+<input id='settings' type='checkbox'>
+  
+<label for='settings'>
+    
+<p>System Settings</p>
+    
+<div class='lil_arrow'></div>
+    
+<div class='content'>
+      
+<ul>
+        
+<li>
+          
+<a draggable="true" ondragstart="drag(event)" id="cntower7" cursor= "pointer">User Settings</a>
+        
+</li>
+       
+<li>
+          
+<a draggable="true" ondragstart="drag(event)" id="cntower8" cursor= "pointer">Edit Profile</a>
+        
+</li>
+        
+<li>
+          
+<a draggable="true" ondragstart="drag(event)" id="cntower9" cursor= "pointer">Do something cool</a>
+        
+</li>
+      
+</ul>
+    
+</div>
+    
+<span></span>
+  
+</label>
+
+</div>
+ 
+</div> 
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+    
+<script src="js/index.js"></script>
+
+
+
+
+
+<div class="wholepart">
+	<div class="limiter">
+		<div class="container-table100">
+			<div class="wrap-table100">
+
+				<div class="table100 ver2 m-b-110">
+					<table data-vertable="ver2">
+						<thead>
+							<tr class="row100 head">
+								<th class="column100 column1" data-column="column1"></th>
+								<th class="column100 column2" data-column="column2">First Day</th>
+								<th class="column100 column3" data-column="column3">Second Day</th>
+								<th class="column100 column4" data-column="column4">Third Day</th>
+								<th class="column100 column5" data-column="column5">Fourth Day</th>
+								<th class="column100 column6" data-column="column6">Fifth Day</th>
+								<th class="column100 column7" data-column="column7">Sixth Day</th>
+								<th class="column100 column8" data-column="column8">Seventh Day</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="row100">
+								<td class="column100 column1" data-column="column1" id="firstentry">Lawrence Scott</td>
+								<td class="column100 column2" data-column="column2" id="firstentry" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column3" data-column="column3"id="firstentry" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column4" data-column="column4" id="firstentry" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column5" data-column="column5" id="firstentry" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column6" data-column="column6" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column7" data-column="column7" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column8" data-column="column8" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+							</tr>
+
+							<tr class="row100">
+								<td class="column100 column1" data-column="column1">Jane Medina</td>
+								<td class="column100 column2" data-column="column2" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column3" data-column="column3" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column4" data-column="column4" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column5" data-column="column5" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column6" data-column="column6" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column7" data-column="column7" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column8" data-column="column8" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+							</tr>
+
+							<tr class="row100">
+								<td class="column100 column1" data-column="column1" >Billy Mitchell</td>
+								<td class="column100 column2" data-column="column2" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column3" data-column="column3" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column4" data-column="column4" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column5" data-column="column5" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column6" data-column="column6" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column7" data-column="column7" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column8" data-column="column8" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+							</tr>
+
+							<tr class="row100">
+								<td class="column100 column1" data-column="column1">Beverly Reid</td>
+								<td class="column100 column2" data-column="column2" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column3" data-column="column3" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column4" data-column="column4" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column5" data-column="column5" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column6" data-column="column6" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column7" data-column="column7" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column8" data-column="column8" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+							</tr>
+
+							<tr class="row100">
+								<td class="column100 column1" data-column="column1">Tiffany Wade</td>
+								<td class="column100 column2" data-column="column2" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column3" data-column="column3" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column4" data-column="column4" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column5" data-column="column5" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column6" data-column="column6" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column7" data-column="column7" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column8" data-column="column8" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+							</tr>
+
+							<tr class="row100">
+								<td class="column100 column1" data-column="column1">Sean Adams</td>
+								<td class="column100 column2" data-column="column2" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column3" data-column="column3" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column4" data-column="column4" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column5" data-column="column5" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column6" data-column="column6" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column7" data-column="column7" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column8" data-column="column8" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+							</tr>
+
+							<tr class="row100">
+								<td class="column100 column1" data-column="column1">Rachel Simpson</td>
+								<td class="column100 column2" data-column="column2" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column3" data-column="column3" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column4" data-column="column4" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column5" data-column="column5" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column6" data-column="column6" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column7" data-column="column7" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column8" data-column="column8" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+							</tr>
+
+							<tr class="row100">
+								<td class="column100 column1" data-column="column1">Mark Salazar</td>
+								<td class="column100 column2" data-column="column2" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column3" data-column="column3" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column4" data-column="column4" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column5" data-column="column5" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column6" data-column="column6" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+								<td class="column100 column7" data-column="column7" ondrop="drop(event)" ondragover="allowDrop(event)"></td> 
+								<td class="column100 column8" data-column="column8" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+</body>
+
+</html>
