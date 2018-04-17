@@ -47,6 +47,23 @@ input[type=radio] {
   background: rgba(255, 255, 255, 0.5);
   border-radius: 50%;
 }
+.modal { z-index: 50;
+  position: absolute;
+  top: calc(50% - 2rem);
+  width: 4rem;
+  height: 4rem;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.5);
+}
+.topbar {z-index: 50;
+         float:left;
+  position: sticky;
+  top: 0;
+  width: 4rem;
+  height: 4rem;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.5);
+}
 .slider--control.left {
   left: 4rem;
 }

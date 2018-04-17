@@ -86,14 +86,33 @@ a{color: #f1f1f1;
     }
 }
 
-
-.bottrt{
+/*position of city icons*/
+#toronto{
 position:absolute;
-color:red;
-top:75%;
-right:40%;
+color:black;
+top:85%;
+right:25%;
 text-decoration: none;
 }
+#montreal{position:absolute;
+color:black;
+top:75%;
+right:18%;
+text-decoration: none;}
+#ottawa{position:absolute;
+color:black;
+top:80%;
+right:22%;
+text-decoration: none;}
+#vancouver{position:absolute;
+color:black;
+top:75%;
+right:88%;
+text-decoration: none;}
+
+
+
+
 
 .close2{
     display: none;
@@ -102,11 +121,11 @@ text-decoration: none;
 
 
 .hvr-hang{position: sticky;
-	
+	float:left;
 	top:0;
 	padding: 10px;
 	width: 100px;
-	background: grey;
+	background: RGBA(255,255,255,0.3);
 	font: italic 400  18px georgia;
 	text-align: center;
 	}
