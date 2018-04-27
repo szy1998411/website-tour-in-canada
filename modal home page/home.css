@@ -15,10 +15,10 @@ a{color: #f1f1f1;
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 1000001 /* Sit on top */
+    z-index: 1000001; /* Sit on top */
     padding-top: 0px; /* Location of the box */
-    left: 450px;
-    top: 100px;
+    left: 28%;
+    top: 10%;
     width: 700px; /* Full width */
     height: 623px; /* Full height */
     overflow: auto; /* Enable scroll if needed */
@@ -125,7 +125,7 @@ text-decoration: none;}
 	top:0;
 	padding: 10px;
 	width: 100px;
-	background: RGBA(255,255,255,0.3);
+	
 	font: italic 400  18px georgia;
 	text-align: center;
 	}

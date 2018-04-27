@@ -55,14 +55,16 @@ input[type=radio] {
   cursor: pointer;
   background: rgba(255, 255, 255, 0.5);
 }
-.topbar {z-index: 50;
+
+.topbar a {z-index: 50;
          float:left;
+         display:inline-block;
   position: sticky;
   top: 0;
-  width: 4rem;
+  width: 16.6%;
   height: 4rem;
   cursor: pointer;
-  background: rgba(255, 255, 255, 0.5);
+ 
 }
 .slider--control.left {
   left: 4rem;
@@ -114,7 +116,7 @@ input[type=radio] {
   top: 0;
   width: 500%;
   height: 100%;
-  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/slider-1.jpg");
+  background-image: url("sliderpic1.jpg");
 }
 .slider--el.anim-5parts .part.part-1 {
   -webkit-transition: -webkit-transform 1.1s 0.3s;
@@ -445,11 +447,13 @@ input[type=radio] {
   transition: opacity 0.3s;
   opacity: 0;
 }
-.slider--el-heading {
-  font-size: 9rem;
-  font-family: Tesla;
-  text-transform: uppercase;
-  color: #fff;
+.middletext {
+    font: 600 1.2em/1 'Raleway', sans-serif;/*first number is used to modify the thiness,second number is used to modify the size*/
+    color: rgba(0,0,0,.5);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .3em;
+    
 }
 
 /* CONTROL */
