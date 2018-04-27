@@ -2,10 +2,47 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="Footer-with-social-icons.css">
+
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-<style>
-.icon-circle {       
-    position: fixed;
+<link rel="stylesheet" type="text/css" href="topbar.css">
+    <style>
+/*define parallax scrolling effect for foorter*/
+.footer {
+/* Full height */
+    height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  background-image: url("footerimage.jpg");
+  height: 60%;
+ 
+  position: relative;
+}
+
+
+/*define the style of the second header*/
+.middletext {
+    font: 600 1.2em/1 'Raleway', sans-serif;/*first number is used to modify the thiness,second number is used to modify the size*/
+    color: rgba(0,0,0,.5);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .3em;
+    
+}
+/******************define the position of the social-bar**********************/
+
+
+       .icon-circle {       
+    position: static;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -13,16 +50,14 @@
     text-align: center;
         }
         h3 {
-            position: fixed;
+            position: static;
     left: 0;
     bottom: 60px;
     width: 100%;
             text-align: center;
         }
 
-        body {
-            padding: 50px;
-        }
+        
 
         h2 {text-align:center;
         }
@@ -30,13 +65,13 @@
 
         .icon-circle .fa {
             font-size: 25px;
-            color: #e84700;
+            color: purple;
             margin: 0 auto;
-            height: 80px;
-            width: 80px;
+            height: 40px;/*size of the icon-circle*/
+            width: 40px;/*size of the icon-circle*/
             border-radius: 50%;
-            border: 2px solid #e84700;
-            line-height: 80px;
+            border: 2px solid purple;
+            line-height: 35px;/*define the height of the icon in the icon-circle*/
             cursor: pointer;
             -webkit-transition: all ease-in-out 0.35s;
             -moz-transition: all ease-in-out 0.35s;
@@ -46,9 +81,9 @@
         }
 
             .icon-circle .fa:hover {
-                background-color: #e84700;
+                background-color: purple;
                 color: #fff;
-                border: 1px solid #e84711;
+                border: 1px solid purple;
                 -moz-box-shadow: inset 0px 0px 0px 5px #ffffff;
                 -o-box-shadow: inset 0px 0px 0px 5px #ffffff;
                 -ms-box-shadow: inset 0px 0px 0px 5px #ffffff;
@@ -63,7 +98,7 @@
 
         .icon-circle i:before {
             margin-left: 0px;
-            font-size: 40px;
+            font-size: 20px;/*size of the icon*/
         }
 
         @media (min-width:320px) and (max-width:768px) {
@@ -107,7 +142,7 @@
                 font-size: 20px;
             }
         }
-
+/*define the color of each icon*/
         .ifacebook .fa {
             color: #3B5998;
             border: 2px solid #3B5998;
@@ -151,6 +186,27 @@
                 color: #fff;
                 border: 1px solid #007bb7;
             }
+            .iqq .fa {
+            color: pink;
+            border: 2px solid pink;
+        }
+
+            .iqq .fa:hover {
+                background-color: pink;
+                color: #fff;
+                border: 1px solid pink;
+            }
+            .iwechat .fa {
+            color: lawngreen;
+            border: 2px solid lawngreen;
+        }
+
+            .iwechat .fa:hover {
+                background-color: lawngreen;
+                color: #fff;
+                border: 1px solid lawngreen;
+            }
+/*define the style of the profile card*/
 .fade {
     position: relative;
 }
@@ -194,11 +250,18 @@ body, html {
 }
 
 .hero-image {
+/* Full height */
+    height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
   background-image: url("pic.jpg");
-  height: 50%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  height: 70%;
+ 
   position: relative;
 }
 
@@ -281,19 +344,36 @@ html {
 .button:hover {
   background-color: #555;
 }
-</style>
+    </style>
 </head>
 <body>
+
+
+
+<div class="topbar">
+        <p>
+            <a href="#" class="hvr-hang" onClick="home()">Home</a>
+            <a href="#" class="hvr-hang" onClick="call()">Map</a>
+            <a href="#" class="hvr-hang">Schedule</a>
+            <a href="#" class="hvr-hang">Support</a>
+	    <a href="#" class="hvr-hang">Log in</a>
+	    <a href="#" class="hvr-hang">About us</a>
+        </p>
+</div>
+
+
+
+
 
 <div class="hero-image">
   <div class="hero-text">
     <h1 style="font-size:50px">Meet the awesome team</h1>
-    <p>incredible folks</p>
+    <p class="middletext">incredible folks</p>
     <button>Hire me</button>
   </div>
 </div>
 
-<h2>We always wanna start a journey with someone we love</h2>
+<h2 class="middletext">We always wanna start a journey with someone we love</h2>
 
 <br>
 
@@ -301,7 +381,7 @@ html {
   <div class="column">
     <div class="card">
       <div class="fade">
-      <img src="pic.png" alt="Sam" style="width:100%" class="image">
+      <img src="pic.jpg" alt="Sam" style="width:100%" class="image">
 	<div class="middle">
         <div class="text">Journey will continue, I will continue</div>
   	</div>
@@ -311,7 +391,7 @@ html {
         <p class="title">CEO & Founder</p>
         <p>University of Waterloo</p>
         <p>yqf19971124@gmail.com</p>
-        <p><button class="button" href="https://www.linkedin.com/in/qifan-yang-farm">Connect me on Linkedin</button></p>
+        <p><a class="button" href="https://www.linkedin.com/in/qifan-yang-farm" style="text-decoration:none" target="_blank">Connect me on Linkedin</a></p>
       </div>
     </div>
   </div>
@@ -326,10 +406,10 @@ html {
       </div>
       <div class="container">
         <h2>Joe</h2>
-        <p class="title">Co-founder</p>
+        <p class="title">Co-Founder</p>
         <p>University of Waterloo</p>
-        <p>example@example.com</p>
-        <p><button class="button">Connect me on linkedin</button></p>
+        <p>sunzhenyu1998411@outlook.com</p>
+        <p><a class="button" href="https://www.linkedin.com/in/zhenyu-sun-897761156/" style="text-decoration:none" target="_blank">Connect me on linkedin</a></p>
       </div>
     </div>
   </div>
@@ -344,43 +424,102 @@ html {
       </div>
       <div class="container">
         <h2>I want you</h2>
-        <p class="title">web design</p>
+        <p class="title">Web Design</p>
         <p>University of Waterloo</p>
         <p>yqf19971124@gmail.com</p>
-        <p><button class="button" href="https://www.linkedin.com/in/qifan-yang-farm">Connect me on Linkedin</button></p>
+        <p><a class="button" href="https://www.linkedin.com/in/qifan-yang-farm" style="text-decoration:none" target="_blank">Connect me on Linkedin</a></p>
       </div>
     </div>
   
 </div>
-    <h3>Share this website on your social media</h3>
+    </div>
 
 
-    <div class="container-fluid">
 
-        <div class="row">
+<hr>
+   
 
-            <div class="sicon">
 
-                <div class="col-lg-1 col-md-1 col-sm-2 col-xs-3 text-center">
 
-                    <div class="icon-circle">
 
-                        <a href="#" class="ifacebook" title="Facebook"><i class="fa fa-facebook"></i></a>
-                        <a href="#" class="itwittter" title="Twitter"><i class="fa fa-twitter"></i></a>
-                        <a href="#" class="igoogle" title="Google+"><i class="fa fa-google-plus"></i></a>
-                        <a href="#" class="iLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a>
-                        <a href="#" class="iGithub" title="Github"><i class="fa fa-github"></i></a>
+    <div class="footer">
+        <footer id="myFooter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3 myCols">
+                        <h5>Get started</h5>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Sign up</a></li>
+                            <li><a href="#">Schedule</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3 myCols">
+                        <h5>About us</h5>
+                        <ul>
+                            <li><a href="#">Company Information</a></li>
+                            <li><a href="#">Contact us</a></li>
+                            <li><a href="#">Reviews</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3 myCols">
+                        <h5>Support</h5>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Help desk</a></li>
+                            <li><a href="#">Forums</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3 myCols">
+                        <h5>Legal</h5>
+                        <ul>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Terms of Use</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="footer-copyright">
+                <h3>Share this website on your social media</h3>
+                <div class="container-fluid">
+
+                    <div class="row">
+
+                        <div class="sicon">
+
+                            <div class="col-lg-1 col-md-1 col-sm-2 col-xs-3 text-center">
+
+                                <div class="icon-circle">
+
+                                    <a href="#" class="ifacebook" title="Facebook"><i class="fa fa-facebook"></i></a>
+                                    <a href="#" class="itwittter" title="Twitter"><i class="fa fa-twitter"></i></a>
+                                    <a href="#" class="igoogle" title="Google+"><i class="fa fa-google-plus"></i></a>
+                                    <a href="#" class="iLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+                                    <a href="#" class="iGithub" title="Github"><i class="fa fa-github"></i></a>
+                                    <a href="#" class="iqq" title="QQ"><i class="fa fa-qq"></i></a>
+                                    <a href="#" class="iwechat" title="wechat"><i class="fa fa-wechat"></i></a>
+
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
 
                     </div>
 
-
                 </div>
 
-
+                <p>© copyright 2018, All right reserved by Snail workshop </p>
             </div>
-
-        </div>
-
+        </footer>
     </div>
+
 </body>
 </html>
